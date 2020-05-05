@@ -246,11 +246,11 @@
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:数学工具"
         "ProductCode" = "8:{7B18C904-8374-471D-82C9-E513A8903AD6}"
-        "PackageCode" = "8:{38869EE3-203A-4F78-B9F5-B2632143DB41}"
+        "PackageCode" = "8:{ACDC78BC-AFC3-4B03-A0DB-14D9328B6F71}"
         "UpgradeCode" = "8:{A250B719-B83D-49BB-9C95-5D53A692F539}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
-        "RemovePreviousVersions" = "11:FALSE"
+        "RemovePreviousVersions" = "11:TRUE"
         "DetectNewerInstalledVersion" = "11:TRUE"
         "InstallAllUsers" = "11:FALSE"
         "ProductVersion" = "8:1.0.0"
@@ -795,7 +795,7 @@
         {
             "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_0C8AAAFBE22C4A2D9E58BE51317FC782"
             {
-            "SourcePath" = "8:..\\分解质因数器\\obj\\Release\\数学工具.exe"
+            "SourcePath" = "8:..\\数学工具\\obj\\Release\\数学工具.exe"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_B0777E87BE654DD8A87CC38709BEC033"
