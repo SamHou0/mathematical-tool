@@ -1,5 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
+using System.IO;
+using System.Net;
 using System.Threading;
 using System.Windows.Forms;
 
@@ -18,7 +21,6 @@ namespace 数学工具
         {
             cancel_button.Enabled = false;
         }
-
         private void start_button_Click(object sender, EventArgs e)
         {
             cancel_button.Enabled = true;
@@ -105,6 +107,28 @@ namespace 数学工具
                 zhi_shu = false;
             }
             return zhi_shu;
+        }
+
+        private void check_update_DoWork(object sender, System.ComponentModel.DoWorkEventArgs e)
+        {
+            WebClient webClient = new WebClient();
+            File.Delete(@"C:\Users\Public\Setup.msi");
+            webClient.DownloadFile("https://samhou2007.github.io/releases/mathematical-tool/Setup.msi", @"C:\Users\Public\Setup.msi");
+        }
+
+        private void install_update_button_Click(object sender, EventArgs e)
+        {
+            check_update.RunWorkerAsync();
+            install_update_button.Enabled = false;
+        }
+
+        private void check_update_RunWorkerCompleted(object sender, System.ComponentModel.RunWorkerCompletedEventArgs e)
+        {
+            install_update_button.Enabled = true;
+            Process process = new Process();
+            process.StartInfo.FileName = @"C:\Users\Public\Setup.msi";
+            process.Start();
+
         }
     }
 }
