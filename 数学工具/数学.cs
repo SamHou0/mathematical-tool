@@ -14,7 +14,6 @@ namespace 数学工具
         public 数学工具()
         {
             InitializeComponent();
-
         }
         public int a = 0;
         private void Form1_Load(object sender, EventArgs e)
@@ -40,7 +39,6 @@ namespace 数学工具
             Error = false;
             int y = 1;
             List<int> list = new List<int>();
-            
             while (y <= a)
             {
                 if(background_decomposition.CancellationPending)
@@ -54,12 +52,13 @@ namespace 数学工具
                     if (a % y == 0)
                     {
                         list.Add(y);
-                        a = a / y;
+                        a /= y;
                         y = 1;
                     }
                     else { y += 1; }
                 }
                 else { y += 1; }
+                
             }
             string jieguo = "";
             foreach (int name in list)
@@ -71,7 +70,7 @@ namespace 数学工具
 
         private void background_decomposition_RunWorkerCompleted(object sender, System.ComponentModel.RunWorkerCompletedEventArgs e)
         {
-            if(Error==true)
+            if (Error==true)
             {
                 start_button.Enabled = true;
                 cancel_button.Enabled = false;
@@ -83,6 +82,7 @@ namespace 数学工具
             start_button.Enabled = true;
             status_indication.Text = "空闲";
             cancel_button.Enabled = false;
+            File.AppendAllText(@"C:\Users\Public\history_record.txt", input_box.Value + ":" + e.Result.ToString()+"\n");
         }
         private bool prime_number_judgment(int y)
         {
@@ -128,7 +128,11 @@ namespace 数学工具
             Process process = new Process();
             process.StartInfo.FileName = @"C:\Users\Public\Setup.msi";
             process.Start();
+        }
 
+        private void open_button_Click(object sender, EventArgs e)
+        {
+            Process.Start("notepad.exe", @"C:\Users\Public\history_record.txt");
         }
     }
 }

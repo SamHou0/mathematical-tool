@@ -38,6 +38,7 @@
             this.status_indication = new System.Windows.Forms.Label();
             this.check_update = new System.ComponentModel.BackgroundWorker();
             this.install_update_button = new System.Windows.Forms.Button();
+            this.open_button = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.input_box)).BeginInit();
             this.SuspendLayout();
             // 
@@ -118,6 +119,8 @@
             // 
             // check_update
             // 
+            this.check_update.WorkerReportsProgress = true;
+            this.check_update.WorkerSupportsCancellation = true;
             this.check_update.DoWork += new System.ComponentModel.DoWorkEventHandler(this.check_update_DoWork);
             this.check_update.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.check_update_RunWorkerCompleted);
             // 
@@ -131,12 +134,23 @@
             this.install_update_button.UseVisualStyleBackColor = true;
             this.install_update_button.Click += new System.EventHandler(this.install_update_button_Click);
             // 
+            // open_button
+            // 
+            this.open_button.Location = new System.Drawing.Point(641, 45);
+            this.open_button.Name = "open_button";
+            this.open_button.Size = new System.Drawing.Size(75, 25);
+            this.open_button.TabIndex = 10;
+            this.open_button.Text = "历史记录";
+            this.open_button.UseVisualStyleBackColor = true;
+            this.open_button.Click += new System.EventHandler(this.open_button_Click);
+            // 
             // 数学工具
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.SystemColors.Info;
             this.ClientSize = new System.Drawing.Size(784, 420);
+            this.Controls.Add(this.open_button);
             this.Controls.Add(this.install_update_button);
             this.Controls.Add(this.status_indication);
             this.Controls.Add(this.label1);
@@ -167,6 +181,7 @@
         private System.Windows.Forms.Label status_indication;
         private System.ComponentModel.BackgroundWorker check_update;
         private System.Windows.Forms.Button install_update_button;
+        private System.Windows.Forms.Button open_button;
     }
 }
 
