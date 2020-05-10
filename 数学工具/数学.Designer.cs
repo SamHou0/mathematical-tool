@@ -130,7 +130,7 @@
             this.install_update_button.Name = "install_update_button";
             this.install_update_button.Size = new System.Drawing.Size(98, 44);
             this.install_update_button.TabIndex = 9;
-            this.install_update_button.Text = "安装更新";
+            this.install_update_button.Text = "检查更新";
             this.install_update_button.UseVisualStyleBackColor = true;
             this.install_update_button.Click += new System.EventHandler(this.install_update_button_Click);
             // 
