@@ -10,6 +10,7 @@ namespace 数学工具
 {
     public partial class 数学工具 : Form
     {
+        
         private bool Error = false;
         public 数学工具()
         {
@@ -112,8 +113,8 @@ namespace 数学工具
         private void check_update_DoWork(object sender, System.ComponentModel.DoWorkEventArgs e)
         {
             WebClient webClient = new WebClient();
-            File.Delete(@"C:\Users\Public\Setup.msi");
-            webClient.DownloadFile("https://samhou2007.github.io/releases/mathematical-tool/Setup.msi", @"C:\Users\Public\Setup.msi");
+            //File.Delete(@"C:\Users\Public\Setup.msi");
+            webClient.DownloadFile("https://samhou2007.github.io/mathematical-tool/images/分解质因数器.ico", @"C:\Users\Public\分解质因数器.ico");
         }
 
         private void install_update_button_Click(object sender, EventArgs e)
@@ -125,9 +126,9 @@ namespace 数学工具
         private void check_update_RunWorkerCompleted(object sender, System.ComponentModel.RunWorkerCompletedEventArgs e)
         {
             install_update_button.Enabled = true;
-            Process process = new Process();
-            process.StartInfo.FileName = @"C:\Users\Public\Setup.msi";
-            process.Start();
+        //    Process process = new Process();
+        //    process.StartInfo.FileName = @"C:\Users\Public\Setup.msi";
+        //    process.Start();
         }
 
         private void open_button_Click(object sender, EventArgs e)
