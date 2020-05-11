@@ -39,6 +39,7 @@
             this.check_update = new System.ComponentModel.BackgroundWorker();
             this.install_update_button = new System.Windows.Forms.Button();
             this.open_button = new System.Windows.Forms.Button();
+            this.delete_button = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.input_box)).BeginInit();
             this.SuspendLayout();
             // 
@@ -62,6 +63,7 @@
             // 
             // cancel_button
             // 
+            this.cancel_button.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.cancel_button.Location = new System.Drawing.Point(454, 158);
             this.cancel_button.Name = "cancel_button";
             this.cancel_button.Size = new System.Drawing.Size(170, 73);
@@ -136,7 +138,7 @@
             // 
             // open_button
             // 
-            this.open_button.Location = new System.Drawing.Point(641, 45);
+            this.open_button.Location = new System.Drawing.Point(641, 33);
             this.open_button.Name = "open_button";
             this.open_button.Size = new System.Drawing.Size(75, 25);
             this.open_button.TabIndex = 10;
@@ -144,12 +146,25 @@
             this.open_button.UseVisualStyleBackColor = true;
             this.open_button.Click += new System.EventHandler(this.open_button_Click);
             // 
+            // delete_button
+            // 
+            this.delete_button.Location = new System.Drawing.Point(641, 69);
+            this.delete_button.Name = "delete_button";
+            this.delete_button.Size = new System.Drawing.Size(75, 23);
+            this.delete_button.TabIndex = 11;
+            this.delete_button.Text = "清除记录";
+            this.delete_button.UseVisualStyleBackColor = true;
+            this.delete_button.Click += new System.EventHandler(this.delete_button_Click);
+            // 
             // 数学工具
             // 
+            this.AcceptButton = this.start_button;
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.SystemColors.Info;
+            this.CancelButton = this.cancel_button;
             this.ClientSize = new System.Drawing.Size(784, 420);
+            this.Controls.Add(this.delete_button);
             this.Controls.Add(this.open_button);
             this.Controls.Add(this.install_update_button);
             this.Controls.Add(this.status_indication);
@@ -182,6 +197,7 @@
         private System.ComponentModel.BackgroundWorker check_update;
         private System.Windows.Forms.Button install_update_button;
         private System.Windows.Forms.Button open_button;
+        private System.Windows.Forms.Button delete_button;
     }
 }
 

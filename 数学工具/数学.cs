@@ -127,7 +127,7 @@ namespace 数学工具
                 MessageBox.Show("无网络连接！", "错误", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
-            if (File.ReadAllText(@"C:\Users\Public\version_number.txt") != "2.5.0")//TODO:升级版本后记得修改版本号
+            if (File.ReadAllText(@"C:\Users\Public\version_number.txt") != "2.5.3")//TODO:升级版本后记得修改版本号
             {
                 DialogResult dialogResult = MessageBox.Show("检测到更新，是否下载并安装？", "提示", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
                 if (dialogResult == DialogResult.Yes)
@@ -176,7 +176,16 @@ namespace 数学工具
 
         private void open_button_Click(object sender, EventArgs e)
         {
-            Process.Start("notepad.exe", @"C:\Users\Public\history_record.txt");
+            if (File.Exists(@"C:\Users\Public\history_record.txt"))
+                Process.Start("notepad.exe", @"C:\Users\Public\history_record.txt");
+            else
+                MessageBox.Show("没有历史记录！", "错误", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        }
+
+        private void delete_button_Click(object sender, EventArgs e)
+        {
+            File.Delete(@"C:\Users\Public\history_record.txt");
+            MessageBox.Show("已经清除历史记录！", "提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
     }
 }
