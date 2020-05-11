@@ -246,7 +246,7 @@
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:数学工具"
         "ProductCode" = "8:{C7EE3E71-7F0B-4E8C-85A0-F1A95F6A91B4}"
-        "PackageCode" = "8:{269B8AE1-D654-4F48-BD9E-57D0688727F1}"
+        "PackageCode" = "8:{76CB492B-3857-48A6-BEC0-7188DC8A51B4}"
         "UpgradeCode" = "8:{A250B719-B83D-49BB-9C95-5D53A692F539}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
