@@ -103,6 +103,11 @@
     <Compile Include="about.Designer.cs">
       <DependentUpon>about.cs</DependentUpon>
     </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="数学.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -119,14 +124,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -170,7 +170,12 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Resources\auqk0-4xmf8.png" />
+    <None Include="Resources\icons8_cancel_48px.png" />
     <Content Include="Resources\icons8_information.ico" />
+    <None Include="Resources\icons8_wi-fi_connected_24px.png" />
+    <None Include="Resources\icons8_wi-fi_disconnected_24px.png" />
+    <None Include="Resources\icons8_ok_48px.png" />
+    <None Include="Resources\icons8_Warning_48px.png" />
     <Content Include="分解质因数器.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

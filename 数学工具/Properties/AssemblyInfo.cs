@@ -21,7 +21,7 @@ using System.Runtime.InteropServices;
 // 如果此项目向 COM 公开，则下列 GUID 用于类型库的 ID
 [assembly: Guid("c398572b-d821-4348-b8ae-dd1d546e95ea")]
 
-// 程序集的版本信息由下列四个值组成: 
+// 程序集的版本信息由下列四个值组成:
 //
 //      主版本
 //      次版本
@@ -31,5 +31,5 @@ using System.Runtime.InteropServices;
 //可以指定所有这些值，也可以使用“生成号”和“修订号”的默认值
 //通过使用 "*"，如下所示:
 // [assembly: AssemblyVersion("1.0.*")]
-[assembly: AssemblyVersion("2.5.4")]//TODO:记得升级版本后修改版本号
-[assembly: AssemblyFileVersion("2.5.4")]
+[assembly: AssemblyVersion("2.6.5")]//TODO:记得升级版本后修改版本号
+[assembly: AssemblyFileVersion("2.6.5")]

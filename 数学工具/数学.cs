@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
 using System.Net;
-using System.Threading;
 using System.Windows.Forms;
 
 namespace 数学工具
@@ -13,25 +12,32 @@ namespace 数学工具
         private bool start = false;
         private bool need_update = false;
         private bool Error = false;
+
         public 数学工具()
         {
             InitializeComponent();
         }
+
         public int a = 0;
+
         private void Form1_Load(object sender, EventArgs e)
         {
             start = true;
-            pictureBox2.Enabled = false;
+            cancel_button.Enabled = false;
             install_update_button.Enabled = false;
             check_update.RunWorkerAsync();
         }
+
         private void start_button_Click(object sender, EventArgs e)
         {
-        }
-
-        private void pictureBox2_Click(object sender, EventArgs e)
-        {
-            background_decomposition.CancelAsync();
+            cancel_button.Enabled = true;
+            a = Convert.ToInt32(input_box.Value);
+            start_button.Enabled = false;
+            if (background_decomposition.IsBusy == false)
+            {
+                background_decomposition.RunWorkerAsync();
+                status_indication.Text = "计算中...";
+            }
         }
 
         private void background_decomposition_DoWork(object sender, System.ComponentModel.DoWorkEventArgs e)
@@ -41,7 +47,7 @@ namespace 数学工具
             List<int> list = new List<int>();
             while (y <= a)
             {
-                if(background_decomposition.CancellationPending)
+                if (background_decomposition.CancellationPending)
                 {
                     Error = true;
                     return;
@@ -58,7 +64,6 @@ namespace 数学工具
                     else { y += 1; }
                 }
                 else { y += 1; }
-                
             }
             string jieguo = "";
             foreach (int name in list)
@@ -70,23 +75,23 @@ namespace 数学工具
 
         private void background_decomposition_RunWorkerCompleted(object sender, System.ComponentModel.RunWorkerCompletedEventArgs e)
         {
-            if (Error==true)
+            if (Error == true)
             {
-                pictureBox1.Enabled = true;
-                pictureBox2.Enabled = false;
+                start_button.Enabled = true;
+                cancel_button.Enabled = false;
                 MessageBox.Show("错误！操作已取消！");
                 status_indication.Text = "空闲";
                 return;
             }
             textBox1.Text = e.Result.ToString();
-            pictureBox1.Enabled = true;
+            start_button.Enabled = true;
             status_indication.Text = "空闲";
-            pictureBox2.Enabled = false;
-            File.AppendAllText(@"C:\Users\Public\history_record.txt", input_box.Value + ":" + e.Result.ToString()+"\n");
+            cancel_button.Enabled = false;
+            File.AppendAllText(@"C:\Users\Public\history_record.txt", input_box.Value + ":" + e.Result.ToString() + "\n");
         }
+
         private bool prime_number_judgment(int y)
         {
-
             List<int> numbers = new List<int>();
             bool zhi_shu = true;
             for (int i = 2; i < y; i++)
@@ -122,7 +127,7 @@ namespace 数学工具
                 MessageBox.Show("无网络连接！", "错误", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
-            if (File.ReadAllText(@"C:\Users\Public\version_number.txt") != "2.5.4")//TODO:升级版本后记得修改版本号
+            if (File.ReadAllText(@"C:\Users\Public\version_number.txt") != "2.6.5")//TODO:升级版本后记得修改版本号
             {
                 DialogResult dialogResult = MessageBox.Show("检测到更新，是否下载并安装？", "提示", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
                 if (dialogResult == DialogResult.Yes)
@@ -138,12 +143,11 @@ namespace 数学工具
                         need_update = false;
                         MessageBox.Show("下载失败，请检查网络连接并重试！", "错误", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
-                    
                 }
             }
             else
             {
-                if (start==false)
+                if (start == false)
                 {
                     MessageBox.Show("没有更新！", "提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
@@ -160,13 +164,12 @@ namespace 数学工具
         private void check_update_RunWorkerCompleted(object sender, System.ComponentModel.RunWorkerCompletedEventArgs e)
         {
             install_update_button.Enabled = true;
-            if (need_update==true)
+            if (need_update == true)
             {
                 Process process = new Process();
                 process.StartInfo.FileName = @"C:\Users\Public\Setup.msi";
                 process.Start();
             }
-            
         }
 
         private void open_button_Click(object sender, EventArgs e)
@@ -183,20 +186,30 @@ namespace 数学工具
             MessageBox.Show("已经清除历史记录！", "提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-            pictureBox2.Enabled = true;
-            a = Convert.ToInt32(input_box.Value);
-            pictureBox1.Enabled = false;
-            background_decomposition.RunWorkerAsync();
-            status_indication.Text = "计算中...";
-        }
-
         private void about_button_Click(object sender, EventArgs e)
         {
             about about = new about();
             about.ShowDialog();
         }
+
+        private void cancel_button_Click(object sender, EventArgs e)
+        {
+            background_decomposition.CancelAsync();
+        }
+
+        private void input_box_ValueChanged(object sender, EventArgs e)
+        {
+            if (radioButton1.Checked&&Convert.ToInt32(input_box.Value)<=10000)
+            {
+                cancel_button.Enabled = true;
+                a = Convert.ToInt32(input_box.Value);
+                start_button.Enabled = false;
+                if (background_decomposition.IsBusy == false)
+                {
+                    background_decomposition.RunWorkerAsync();
+                    status_indication.Text = "计算中...";
+                }
+            }
+        }
     }
 }
-

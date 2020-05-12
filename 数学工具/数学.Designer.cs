@@ -38,12 +38,12 @@
             this.install_update_button = new System.Windows.Forms.Button();
             this.open_button = new System.Windows.Forms.Button();
             this.delete_button = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.about_button = new System.Windows.Forms.Button();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.start_button = new System.Windows.Forms.Button();
+            this.cancel_button = new System.Windows.Forms.Button();
+            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.radioButton2 = new System.Windows.Forms.RadioButton();
             ((System.ComponentModel.ISupportInitialize)(this.input_box)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // background_decomposition
@@ -74,6 +74,7 @@
             0,
             0,
             0});
+            this.input_box.ValueChanged += new System.EventHandler(this.input_box_ValueChanged);
             // 
             // textBox1
             // 
@@ -137,47 +138,72 @@
             this.delete_button.UseVisualStyleBackColor = true;
             this.delete_button.Click += new System.EventHandler(this.delete_button_Click);
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(229, 158);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(92, 76);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 12;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
-            // 
             // about_button
             // 
             this.about_button.Location = new System.Drawing.Point(23, 12);
             this.about_button.Name = "about_button";
-            this.about_button.Size = new System.Drawing.Size(72, 25);
+            this.about_button.Size = new System.Drawing.Size(111, 33);
             this.about_button.TabIndex = 13;
-            this.about_button.Text = "关于";
+            this.about_button.Text = "关于/帮助";
             this.about_button.UseVisualStyleBackColor = true;
             this.about_button.Click += new System.EventHandler(this.about_button_Click);
             // 
-            // pictureBox2
+            // start_button
             // 
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(492, 158);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(64, 64);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBox2.TabIndex = 14;
-            this.pictureBox2.TabStop = false;
-            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
+            this.start_button.Location = new System.Drawing.Point(180, 153);
+            this.start_button.Name = "start_button";
+            this.start_button.Size = new System.Drawing.Size(190, 81);
+            this.start_button.TabIndex = 14;
+            this.start_button.Text = "开始计算";
+            this.start_button.UseVisualStyleBackColor = true;
+            this.start_button.Click += new System.EventHandler(this.start_button_Click);
+            // 
+            // cancel_button
+            // 
+            this.cancel_button.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.cancel_button.Location = new System.Drawing.Point(430, 153);
+            this.cancel_button.Name = "cancel_button";
+            this.cancel_button.Size = new System.Drawing.Size(194, 81);
+            this.cancel_button.TabIndex = 15;
+            this.cancel_button.Text = "取消计算";
+            this.cancel_button.UseVisualStyleBackColor = true;
+            this.cancel_button.Click += new System.EventHandler(this.cancel_button_Click);
+            // 
+            // radioButton1
+            // 
+            this.radioButton1.AutoSize = true;
+            this.radioButton1.Checked = true;
+            this.radioButton1.Location = new System.Drawing.Point(16, 51);
+            this.radioButton1.Name = "radioButton1";
+            this.radioButton1.Size = new System.Drawing.Size(118, 19);
+            this.radioButton1.TabIndex = 16;
+            this.radioButton1.TabStop = true;
+            this.radioButton1.Text = "智能计算模式";
+            this.radioButton1.UseVisualStyleBackColor = true;
+            // 
+            // radioButton2
+            // 
+            this.radioButton2.AutoSize = true;
+            this.radioButton2.Location = new System.Drawing.Point(16, 76);
+            this.radioButton2.Name = "radioButton2";
+            this.radioButton2.Size = new System.Drawing.Size(88, 19);
+            this.radioButton2.TabIndex = 17;
+            this.radioButton2.Text = "手动模式";
+            this.radioButton2.UseVisualStyleBackColor = true;
             // 
             // 数学工具
             // 
+            this.AcceptButton = this.start_button;
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.SystemColors.Info;
+            this.CancelButton = this.cancel_button;
             this.ClientSize = new System.Drawing.Size(784, 420);
-            this.Controls.Add(this.pictureBox2);
+            this.Controls.Add(this.radioButton2);
+            this.Controls.Add(this.radioButton1);
+            this.Controls.Add(this.cancel_button);
+            this.Controls.Add(this.start_button);
             this.Controls.Add(this.about_button);
-            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.delete_button);
             this.Controls.Add(this.open_button);
             this.Controls.Add(this.install_update_button);
@@ -193,8 +219,6 @@
             this.Text = "数学工具";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.input_box)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -210,9 +234,11 @@
         private System.Windows.Forms.Button install_update_button;
         private System.Windows.Forms.Button open_button;
         private System.Windows.Forms.Button delete_button;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button about_button;
-        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Button start_button;
+        private System.Windows.Forms.Button cancel_button;
+        private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.RadioButton radioButton2;
     }
 }
 
