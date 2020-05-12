@@ -59,5 +59,15 @@ namespace 数学工具.Properties {
                 resourceCulture = value;
             }
         }
+        
+        /// <summary>
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
+        /// </summary>
+        internal static System.Drawing.Bitmap auqk0_4xmf8 {
+            get {
+                object obj = ResourceManager.GetObject("auqk0-4xmf8", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }

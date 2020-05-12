@@ -29,9 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(数学工具));
-            this.start_button = new System.Windows.Forms.Button();
             this.background_decomposition = new System.ComponentModel.BackgroundWorker();
-            this.cancel_button = new System.Windows.Forms.Button();
             this.input_box = new System.Windows.Forms.NumericUpDown();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -40,19 +38,13 @@
             this.install_update_button = new System.Windows.Forms.Button();
             this.open_button = new System.Windows.Forms.Button();
             this.delete_button = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.about_button = new System.Windows.Forms.Button();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.input_box)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
-            // 
-            // start_button
-            // 
-            this.start_button.AutoSize = true;
-            this.start_button.Location = new System.Drawing.Point(180, 158);
-            this.start_button.Name = "start_button";
-            this.start_button.Size = new System.Drawing.Size(172, 73);
-            this.start_button.TabIndex = 3;
-            this.start_button.Text = "开始";
-            this.start_button.UseVisualStyleBackColor = true;
-            this.start_button.Click += new System.EventHandler(this.start_button_Click);
             // 
             // background_decomposition
             // 
@@ -60,17 +52,6 @@
             this.background_decomposition.WorkerSupportsCancellation = true;
             this.background_decomposition.DoWork += new System.ComponentModel.DoWorkEventHandler(this.background_decomposition_DoWork);
             this.background_decomposition.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.background_decomposition_RunWorkerCompleted);
-            // 
-            // cancel_button
-            // 
-            this.cancel_button.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.cancel_button.Location = new System.Drawing.Point(454, 158);
-            this.cancel_button.Name = "cancel_button";
-            this.cancel_button.Size = new System.Drawing.Size(170, 73);
-            this.cancel_button.TabIndex = 4;
-            this.cancel_button.Text = "取消计算";
-            this.cancel_button.UseVisualStyleBackColor = true;
-            this.cancel_button.Click += new System.EventHandler(this.cancel_button_Click);
             // 
             // input_box
             // 
@@ -156,14 +137,47 @@
             this.delete_button.UseVisualStyleBackColor = true;
             this.delete_button.Click += new System.EventHandler(this.delete_button_Click);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(229, 158);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(92, 76);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 12;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
+            // about_button
+            // 
+            this.about_button.Location = new System.Drawing.Point(23, 12);
+            this.about_button.Name = "about_button";
+            this.about_button.Size = new System.Drawing.Size(72, 25);
+            this.about_button.TabIndex = 13;
+            this.about_button.Text = "关于";
+            this.about_button.UseVisualStyleBackColor = true;
+            this.about_button.Click += new System.EventHandler(this.about_button_Click);
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(492, 158);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(64, 64);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox2.TabIndex = 14;
+            this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
+            // 
             // 数学工具
             // 
-            this.AcceptButton = this.start_button;
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.SystemColors.Info;
-            this.CancelButton = this.cancel_button;
             this.ClientSize = new System.Drawing.Size(784, 420);
+            this.Controls.Add(this.pictureBox2);
+            this.Controls.Add(this.about_button);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.delete_button);
             this.Controls.Add(this.open_button);
             this.Controls.Add(this.install_update_button);
@@ -171,8 +185,6 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.input_box);
-            this.Controls.Add(this.cancel_button);
-            this.Controls.Add(this.start_button);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(802, 467);
@@ -181,15 +193,15 @@
             this.Text = "数学工具";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.input_box)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-        private System.Windows.Forms.Button start_button;
         private System.ComponentModel.BackgroundWorker background_decomposition;
-        private System.Windows.Forms.Button cancel_button;
         private System.Windows.Forms.NumericUpDown input_box;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label1;
@@ -198,6 +210,9 @@
         private System.Windows.Forms.Button install_update_button;
         private System.Windows.Forms.Button open_button;
         private System.Windows.Forms.Button delete_button;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button about_button;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }
 

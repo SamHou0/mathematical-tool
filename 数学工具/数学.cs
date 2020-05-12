@@ -21,20 +21,15 @@ namespace 数学工具
         private void Form1_Load(object sender, EventArgs e)
         {
             start = true;
-            cancel_button.Enabled = false;
+            pictureBox2.Enabled = false;
             install_update_button.Enabled = false;
             check_update.RunWorkerAsync();
         }
         private void start_button_Click(object sender, EventArgs e)
         {
-            cancel_button.Enabled = true;
-            a=Convert.ToInt32(input_box.Value);
-            start_button.Enabled = false;
-            background_decomposition.RunWorkerAsync();
-            status_indication.Text = "计算中...";
         }
 
-        private void cancel_button_Click(object sender, EventArgs e)
+        private void pictureBox2_Click(object sender, EventArgs e)
         {
             background_decomposition.CancelAsync();
         }
@@ -77,16 +72,16 @@ namespace 数学工具
         {
             if (Error==true)
             {
-                start_button.Enabled = true;
-                cancel_button.Enabled = false;
+                pictureBox1.Enabled = true;
+                pictureBox2.Enabled = false;
                 MessageBox.Show("错误！操作已取消！");
                 status_indication.Text = "空闲";
                 return;
             }
             textBox1.Text = e.Result.ToString();
-            start_button.Enabled = true;
+            pictureBox1.Enabled = true;
             status_indication.Text = "空闲";
-            cancel_button.Enabled = false;
+            pictureBox2.Enabled = false;
             File.AppendAllText(@"C:\Users\Public\history_record.txt", input_box.Value + ":" + e.Result.ToString()+"\n");
         }
         private bool prime_number_judgment(int y)
@@ -127,7 +122,7 @@ namespace 数学工具
                 MessageBox.Show("无网络连接！", "错误", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
-            if (File.ReadAllText(@"C:\Users\Public\version_number.txt") != "2.5.3")//TODO:升级版本后记得修改版本号
+            if (File.ReadAllText(@"C:\Users\Public\version_number.txt") != "2.5.4")//TODO:升级版本后记得修改版本号
             {
                 DialogResult dialogResult = MessageBox.Show("检测到更新，是否下载并安装？", "提示", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
                 if (dialogResult == DialogResult.Yes)
@@ -186,6 +181,21 @@ namespace 数学工具
         {
             File.Delete(@"C:\Users\Public\history_record.txt");
             MessageBox.Show("已经清除历史记录！", "提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            pictureBox2.Enabled = true;
+            a = Convert.ToInt32(input_box.Value);
+            pictureBox1.Enabled = false;
+            background_decomposition.RunWorkerAsync();
+            status_indication.Text = "计算中...";
+        }
+
+        private void about_button_Click(object sender, EventArgs e)
+        {
+            about about = new about();
+            about.ShowDialog();
         }
     }
 }
