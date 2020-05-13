@@ -143,12 +143,10 @@ namespace 数学工具
             WebClient webClient = new WebClient();
             File.Delete(@"C:\Users\Public\Setup.msi");
             File.Delete(@"C:\Users\Public\relsase_notes.txt");
-            if (result[0] == "true")
-            {
                 try
                 {
                     webClient.DownloadFile("https://samhou2007.github.io/mathematical-tool/check_update_information/version_number.txt", @"C:\Users\Public\version_number.txt");
-                    webClient.DownloadFile("https://samhou2007.github.io/mathematical-tool/check_update_information/relsase_notes.txt", @"C:\Users\Public\relsase_notes.txt");
+                    webClient.DownloadFile("https://samhou2007.github.io/mathematical-tool/check_update_information/release_notes.txt", @"C:\Users\Public\relsase_notes.txt");
                 }
                 catch
                 {
@@ -188,7 +186,6 @@ namespace 数学工具
                         MessageBox.Show("没有更新！", "提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
                 }
-            }
         }
 
         private void install_update_button_Click(object sender, EventArgs e)
