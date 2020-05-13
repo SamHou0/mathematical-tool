@@ -21,13 +21,13 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_E724767D41E042C4B70BABEB252DCDDD"
+        "MsmKey" = "8:_44712DF2D4D44C0EA35801EE5D45ADB7"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_FD10E1352CF14D6399FE3100B1D68B89"
+        "MsmKey" = "8:_E724767D41E042C4B70BABEB252DCDDD"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -169,9 +169,9 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_FD10E1352CF14D6399FE3100B1D68B89"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_44712DF2D4D44C0EA35801EE5D45ADB7"
             {
-            "SourcePath" = "8:D:\\SamHo\\Desktop\\分解质因数器.ico"
+            "SourcePath" = "8:..\\数学工具\\分解质因数器.ico"
             "TargetName" = "8:分解质因数器.ico"
             "Tag" = "8:"
             "Folder" = "8:_742ADA494A624D4CA1A678D5C411A4D1"
@@ -245,15 +245,15 @@
         {
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:数学工具"
-        "ProductCode" = "8:{56921B37-6041-465C-BAB4-E2D795960741}"
-        "PackageCode" = "8:{453AE42D-DAF2-4156-BC7F-02E805FE40EB}"
+        "ProductCode" = "8:{227A776B-D5D2-417B-AB80-F8EC28BE384C}"
+        "PackageCode" = "8:{51B11BC8-79F2-421B-ACA7-C249C2CB2FBA}"
         "UpgradeCode" = "8:{A250B719-B83D-49BB-9C95-5D53A692F539}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
         "RemovePreviousVersions" = "11:TRUE"
         "DetectNewerInstalledVersion" = "11:TRUE"
         "InstallAllUsers" = "11:FALSE"
-        "ProductVersion" = "8:2.6.5"
+        "ProductVersion" = "8:2.7.0"
         "Manufacturer" = "8:SamHou"
         "ARPHELPTELEPHONE" = "8:"
         "ARPHELPLINK" = "8:"
@@ -377,7 +377,7 @@
             "Target" = "8:_E724767D41E042C4B70BABEB252DCDDD"
             "Folder" = "8:_AE6A1CF2E2C64190A7528AF4B0541506"
             "WorkingFolder" = "8:_AE6A1CF2E2C64190A7528AF4B0541506"
-            "Icon" = "8:_FD10E1352CF14D6399FE3100B1D68B89"
+            "Icon" = "8:_44712DF2D4D44C0EA35801EE5D45ADB7"
             "Feature" = "8:"
             }
             "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_C642D7E6B5FA4A17BDAEE5052BA24183"
@@ -391,7 +391,7 @@
             "Target" = "8:_E724767D41E042C4B70BABEB252DCDDD"
             "Folder" = "8:_99613515EEDD49C2B2E324EDCC93DE6C"
             "WorkingFolder" = "8:_AE6A1CF2E2C64190A7528AF4B0541506"
-            "Icon" = "8:_FD10E1352CF14D6399FE3100B1D68B89"
+            "Icon" = "8:_44712DF2D4D44C0EA35801EE5D45ADB7"
             "Feature" = "8:"
             }
         }
