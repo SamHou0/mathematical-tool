@@ -159,8 +159,8 @@ namespace 数学工具
                     DialogResult showResult = MessageBox.Show("是否显示更新日志？", "提示", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
                     if (showResult==DialogResult.Yes)
                     {
-                        if (File.Exists(@"C:\Users\Public\history_record.txt"))
-                            Process.Start("notepad.exe", @"C:\Users\Public\history_record.txt");
+                        if (File.Exists(@"C:\Users\Public\relsase_notes.txt"))
+                            Process.Start("notepad.exe", @"C:\Users\Public\relsase_notes.txt");
                         else
                             MessageBox.Show("暂时无法显示日志，文件可能已经被删除。","错误",MessageBoxButtons.OK,MessageBoxIcon.Error);
                     }
