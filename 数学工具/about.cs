@@ -22,7 +22,7 @@ namespace 数学工具
 
         private void linkLabel3_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            Process.Start("https://github.com/SamHou2007/mathematical-tool");
+            Process.Start("https://samhou2007.github.io/mathematical-tool/internet_fix");
         }
     }
 }
