@@ -117,7 +117,7 @@ namespace 数学工具
         private void check_update_DoWork(object sender, System.ComponentModel.DoWorkEventArgs e)
         {
             MyClassLibrary.check_update.start_check_update(
-                start, "2.7.4",//TODO:升级后记得修改版本号
+                start, "2.7.5",//TODO:升级后记得修改版本号
                 "https://samhou2007.github.io/mathematical-tool/check_update_information/version_number.txt",
                 "https://samhou2007.github.io/mathematical-tool/Setup/Release/Setup.msi",
                 "https://samhou2007.github.io/mathematical-tool/check_update_information/release_notes.txt");
