@@ -153,7 +153,7 @@ namespace 数学工具
                     MessageBox.Show("无网络连接！", "错误", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
-                if (File.ReadAllText(@"C:\Users\Public\version_number.txt") != "2.7.2")//TODO:升级版本后记得修改版本号
+                if (File.ReadAllText(@"C:\Users\Public\version_number.txt") != "2.7.3")//TODO:升级版本后记得修改版本号
                 {
                     DialogResult downloadResult = MessageBox.Show("检测到更新，是否下载并安装？", "提示", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
                     DialogResult showResult = MessageBox.Show("是否显示更新日志？", "提示", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
@@ -269,7 +269,7 @@ namespace 数学工具
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-
+            Process.Start("https://samhou2007.github.io/mathematical-tool/internet_fix.html");
         }
     }
 }
