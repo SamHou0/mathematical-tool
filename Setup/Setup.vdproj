@@ -27,6 +27,12 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_70A4C5A12CA29D5A56C55B4F5F13FE01"
+        "OwnerKey" = "8:_E724767D41E042C4B70BABEB252DCDDD"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_E724767D41E042C4B70BABEB252DCDDD"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
@@ -35,6 +41,12 @@
         {
         "MsmKey" = "8:_UNDEFINED"
         "OwnerKey" = "8:_E724767D41E042C4B70BABEB252DCDDD"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_70A4C5A12CA29D5A56C55B4F5F13FE01"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -189,6 +201,37 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_70A4C5A12CA29D5A56C55B4F5F13FE01"
+            {
+            "AssemblyRegister" = "3:1"
+            "AssemblyIsInGAC" = "11:FALSE"
+            "AssemblyAsmDisplayName" = "8:ClassLibrary_Framework, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL"
+                "ScatterAssemblies"
+                {
+                    "_70A4C5A12CA29D5A56C55B4F5F13FE01"
+                    {
+                    "Name" = "8:ClassLibrary_Framework.dll"
+                    "Attributes" = "3:512"
+                    }
+                }
+            "SourcePath" = "8:ClassLibrary_Framework.dll"
+            "TargetName" = "8:"
+            "Tag" = "8:"
+            "Folder" = "8:_742ADA494A624D4CA1A678D5C411A4D1"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:TRUE"
+            "IsolateTo" = "8:"
+            }
         }
         "FileType"
         {
@@ -245,15 +288,15 @@
         {
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:数学工具"
-        "ProductCode" = "8:{EE1E2083-4221-4CC7-91F5-6E7BF237542C}"
-        "PackageCode" = "8:{8E287428-61F6-4B94-977A-18CE675BDFD9}"
+        "ProductCode" = "8:{2156003E-4366-4EFB-8A44-55F11E708703}"
+        "PackageCode" = "8:{478967F9-C1C3-4CB5-8A84-C76FE1F702AF}"
         "UpgradeCode" = "8:{A250B719-B83D-49BB-9C95-5D53A692F539}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
         "RemovePreviousVersions" = "11:TRUE"
         "DetectNewerInstalledVersion" = "11:TRUE"
         "InstallAllUsers" = "11:FALSE"
-        "ProductVersion" = "8:2.7.3"
+        "ProductVersion" = "8:2.7.4"
         "Manufacturer" = "8:SamHou"
         "ARPHELPTELEPHONE" = "8:"
         "ARPHELPLINK" = "8:"
