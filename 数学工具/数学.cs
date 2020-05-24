@@ -27,18 +27,32 @@ namespace 数学工具
             {
                 File.AppendAllText(@"C:\Users\public\settings.txt", "true\n");
                 File.AppendAllText(@"C:\Users\public\settings.txt", "true\n");
+                File.AppendAllText(@"C:\Users\public\settings.txt", "false\n");
             }
             else
             {
-                string[] result = File.ReadAllLines(@"C:\Users\public\settings.txt");
-                if (result[0] == "true")
-                    radioButton1.Checked = true;
-                else
-                    radioButton2.Checked = true;
-                if (result[1] == "true")
-                    radioButton3.Checked = true;
-                else
-                    radioButton4.Checked = true;
+                try
+                {
+
+                    string[] result = File.ReadAllLines(@"C:\Users\public\settings.txt");
+                    if (result[0] == "true")
+                        radioButton1.Checked = true;
+                    else
+                        radioButton2.Checked = true;
+                    if (result[1] == "true")
+                        radioButton3.Checked = true;
+                    else
+                        radioButton4.Checked = true;
+                    if (result[2] == "true")
+                        radioButton5.Checked = true;
+                    else
+                        radioButton6.Checked = true;
+                }
+                catch
+                {
+                    MessageBox.Show(@"设置不完整，可能是文件损坏，请删除C:\Users\public\settings.txt后重新启动。", "错误", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    Environment.Exit(0);
+                }
             }
             start = true;
             cancel_button.Enabled = false;
@@ -47,6 +61,10 @@ namespace 数学工具
                 start_button.Enabled = false;
                 install_update_button.Enabled = false;
                 check_update.RunWorkerAsync();
+            }
+            if (radioButton5.Checked)
+            {
+                TopMost = true;
             }
         }
 
@@ -117,7 +135,7 @@ namespace 数学工具
         private void check_update_DoWork(object sender, System.ComponentModel.DoWorkEventArgs e)
         {
             MyClassLibrary.check_update.start_check_update(
-                start, "2.7.5",//TODO:升级后记得修改版本号
+                start, "2.7.6",//TODO:升级后记得修改版本号
                 "https://samhou2007.github.io/mathematical-tool/check_update_information/version_number.txt",
                 "https://samhou2007.github.io/mathematical-tool/Setup/Release/Setup.msi",
                 "https://samhou2007.github.io/mathematical-tool/check_update_information/release_notes.txt");
@@ -180,7 +198,7 @@ namespace 数学工具
 
         private void save_button_Click(object sender, EventArgs e)
         {
-            save_settings.do_save_settings(radioButton1.Checked, radioButton3.Checked);
+            save_settings.do_save_settings(radioButton1.Checked, radioButton3.Checked,radioButton5.Checked);
             MessageBox.Show("保存成功！", "提示",MessageBoxButtons.OK,MessageBoxIcon.Information);
         }
 
