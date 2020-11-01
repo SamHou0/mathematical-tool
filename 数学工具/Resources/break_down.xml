@@ -1,24 +1,9 @@
 <?xml version="1.0"?>
 <doc>
     <assembly>
-        <name>ClassLibrary_Framework</name>
+        <name>break_down</name>
     </assembly>
     <members>
-        <member name="T:MyClassLibrary.check_update">
-            <summary>
-            检查更新
-            </summary>
-        </member>
-        <member name="M:MyClassLibrary.check_update.start_check_update(System.Boolean,System.String,System.String,System.String,System.String)">
-            <summary>
-            开始进行分解
-            </summary>
-            <param name="start">指示检查时是否为启动时，如果为true，当没有更新时将不弹出窗口</param>
-            <param name="version_number">指示当前版本号</param>
-            <param name="text_url">指示检查更新版本号文件的url</param>
-            <param name="installer_url">指示安装包的url</param>
-            <param name="release_notes_url">指示更新说明的url</param>
-        </member>
         <member name="T:MyClassLibrary.factor_of_decomposition">
             <summary>
             分解质因数的类

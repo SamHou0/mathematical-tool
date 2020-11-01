@@ -339,6 +339,3 @@ bld/
 [Bb]in/
 [Oo]bj/
 [Ll]og/
-#忽略二进制文件
-!Setup/release/
-Setup/release/*.exe

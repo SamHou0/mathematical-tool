@@ -61,7 +61,7 @@
     <GenerateManifests>true</GenerateManifests>
   </PropertyGroup>
   <PropertyGroup>
-    <SignManifests>true</SignManifests>
+    <SignManifests>false</SignManifests>
   </PropertyGroup>
   <PropertyGroup />
   <PropertyGroup>
@@ -78,10 +78,15 @@
   <PropertyGroup>
     <NoWin32Manifest>true</NoWin32Manifest>
   </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>false</SignAssembly>
+  </PropertyGroup>
   <ItemGroup>
-    <Reference Include="ClassLibrary_Framework, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>Resources\ClassLibrary_Framework.dll</HintPath>
+    <Reference Include="break_down">
+      <HintPath>..\..\MyClassLibrary\break_down\bin\Release\netstandard2.1\break_down.dll</HintPath>
+    </Reference>
+    <Reference Include="check_update">
+      <HintPath>..\..\MyClassLibrary\check_update\bin\Release\check_update.dll</HintPath>
     </Reference>
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
@@ -175,8 +180,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Resources\auqk0-4xmf8.png" />
-    <None Include="Resources\ClassLibrary_Framework.dll" />
-    <Content Include="Resources\ClassLibrary_Framework.pdb" />
     <Content Include="Resources\icons8_information.ico" />
     <Content Include="分解质因数器.ico" />
   </ItemGroup>

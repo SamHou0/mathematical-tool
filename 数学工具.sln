@@ -5,8 +5,6 @@ VisualStudioVersion = 16.0.29926.136
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "数学工具", "数学工具\数学工具.csproj", "{C398572B-D821-4348-B8AE-DD1D546E95EA}"
 EndProject
-Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Setup", "Setup\Setup.vdproj", "{4A8D38DE-55EA-4513-8B47-2F82F4C99F90}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -17,8 +15,6 @@ Global
 		{C398572B-D821-4348-B8AE-DD1D546E95EA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C398572B-D821-4348-B8AE-DD1D546E95EA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C398572B-D821-4348-B8AE-DD1D546E95EA}.Release|Any CPU.Build.0 = Release|Any CPU
-		{4A8D38DE-55EA-4513-8B47-2F82F4C99F90}.Debug|Any CPU.ActiveCfg = Debug
-		{4A8D38DE-55EA-4513-8B47-2F82F4C99F90}.Release|Any CPU.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
