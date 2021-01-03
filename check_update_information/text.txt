@@ -1,2 +1,0 @@
-2.7.6
-https://github.com/SamHou2007/mathematical-tool/releases/download/2.7.6/Setup.exe

@@ -1,0 +1,21 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <RootNamespace>math_tool</RootNamespace>
+    <UseWindowsForms>true</UseWindowsForms>
+    <StartupObject>math_tool.Program</StartupObject>
+    <ApplicationIcon>分解质因数器.ico</ApplicationIcon>
+    <UserSecretsId>6c2aeb91-89d4-4317-aebc-4b777c79f269</UserSecretsId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="分解质因数器.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="分解质因数器.ico" />
+  </ItemGroup>
+
+</Project>
