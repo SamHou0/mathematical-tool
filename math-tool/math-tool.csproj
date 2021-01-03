@@ -8,6 +8,7 @@
     <StartupObject>math_tool.Program</StartupObject>
     <ApplicationIcon>分解质因数器.ico</ApplicationIcon>
     <UserSecretsId>6c2aeb91-89d4-4317-aebc-4b777c79f269</UserSecretsId>
+    <SignAssembly>false</SignAssembly>
   </PropertyGroup>
 
   <ItemGroup>
@@ -16,6 +17,10 @@
 
   <ItemGroup>
     <Content Include="分解质因数器.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Properties\" />
   </ItemGroup>
 
 </Project>
