@@ -1,14 +1,18 @@
-﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <OutputType>WinExe</OutputType>
-    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <TargetFramework>net6.0-windows10.0.22000.0</TargetFramework>
     <RootNamespace>math_tool</RootNamespace>
     <UseWindowsForms>true</UseWindowsForms>
     <StartupObject>math_tool.Program</StartupObject>
     <ApplicationIcon>分解质因数器.ico</ApplicationIcon>
     <UserSecretsId>6c2aeb91-89d4-4317-aebc-4b777c79f269</UserSecretsId>
     <SignAssembly>false</SignAssembly>
+    <SupportedOSPlatformVersion>7.0</SupportedOSPlatformVersion>
+    <DebugType>portable</DebugType>
+    <AssemblyVersion>2.7.9</AssemblyVersion>
+    <FileVersion></FileVersion>
   </PropertyGroup>
 
   <ItemGroup>
