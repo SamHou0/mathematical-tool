@@ -104,6 +104,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "PrimeFactors";
             this.Text = "PrimeFactors";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.PrimeFactors_FormClosing);
             this.Load += new System.EventHandler(this.PrimeFactors_Load);
             ((System.ComponentModel.ISupportInitialize)(this.inputBox)).EndInit();
             this.ResumeLayout(false);

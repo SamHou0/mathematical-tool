@@ -95,5 +95,10 @@ namespace math_tool
             startButton.Enabled = true;
             cancelButton.Enabled = false;
         }
+
+        private void PrimeFactors_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            BackgroundDecomposition.CancelAsync();
+        }
     }
 }
